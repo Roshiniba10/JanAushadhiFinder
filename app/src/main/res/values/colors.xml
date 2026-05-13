@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Vibrant & Professional Healthcare Palette -->
+    <color name="primary">#009688</color> <!-- Teal -->
+    <color name="primary_dark">#00796B</color>
+    <color name="primary_variant">#004D40</color>
+    <color name="primary_light">#B2DFDB</color>
+
+    <color name="secondary">#FF7043</color> <!-- Vibrant Coral -->
+    <color name="secondary_dark">#F4511E</color>
+    <color name="secondary_light">#FFCCBC</color>
+
+    <color name="accent">#FFD54F</color> <!-- Amber -->
+
+    <!-- Backgrounds -->
+    <color name="background">#F5F9F9</color>
+    <color name="background_soft">#F5F9F9</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#263238</color>
+    <color name="text_secondary">#546E7A</color>
+    <color name="text_body">#455A64</color>
+    <color name="text_title">#004D40</color>
+
+    <!-- Item specific backgrounds -->
+    <color name="item_header_bg">#F1F8E9</color>
+    <color name="store_header_bg">#E0F2F1</color>
+
+    <!-- Indicators -->
+    <color name="savings_green">#43A047</color>
+    <color name="savings_bg">#E8F5E9</color>
+    <color name="price_red">#D32F2F</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="card_border">#E0E0E0</color>
+
+    <!-- Decorative Gradients -->
+    <color name="grad_start">#00BFA5</color>
+    <color name="grad_end">#00796B</color>
+
+    <!-- Status Colors -->
+    <color name="bmi_underweight">#FFB74D</color>
+    <color name="bmi_normal">#81C784</color>
+    <color name="bmi_overweight">#FF8A65</color>
+    <color name="bmi_obese">#E57373</color>
+
+    <color name="background_gradient_start">#E0F2F1</color>
+    <color name="background_gradient_end">#FFFFFF</color>
+</resources>

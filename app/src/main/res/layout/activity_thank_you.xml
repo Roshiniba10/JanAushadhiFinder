@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_bg">
+
+    <View
+        android:id="@+id/topDecoration"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/header_gradient"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <!-- Top Action Bar Area -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnViewFavorites"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favorites"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/btn_star_big_on"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Settings"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_manage"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/thankYouCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:layout_constraintTop_toBottomOf="@id/topDecoration"
+        app:layout_constraintBottom_toBottomOf="@id/topDecoration">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:background="@color/surface">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="Success" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THANK YOU!"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_title"
+                android:letterSpacing="0.1" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="4dp"
+                android:background="@color/secondary"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We are glad we could help you find affordable generic alternatives."
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/text_body"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/visitAgainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saving money on healthcare starts with a single search."
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/thankYouCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backToHomeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="RESTART SEARCH"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="48dp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="@color/secondary"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

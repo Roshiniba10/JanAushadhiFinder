@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JanAushadhiFinder</string>
+    <string name="brand_format">Brand: %1$s (₹%2$.1f)</string>
+    <string name="used_for_format">Used for: %1$s</string>
+    <string name="price_format">₹%1$.1f</string>
+    <string name="savings_format">₹%1$.1f</string>
+    <string name="gender_format">Gender: %1$s</string>
+    <string name="bmi_format">Your BMI: %1$s</string>
+    <string name="bmi_status_format">Status: %1$s</string>
+</resources>

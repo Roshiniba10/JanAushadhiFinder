@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_bg">
+
+    <!-- Decorative Circles -->
+    <View
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/circle_decoration"
+        android:alpha="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="-80dp" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/primary_variant" />
+
+    <!-- Top Action Bar Area -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnViewFavorites"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favorites"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/btn_star_big_on"
+            app:tint="@color/primary_variant" />
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Settings"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_manage"
+            app:tint="@color/primary_variant" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/welcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="User Profile"
+        android:textColor="@color/primary_variant"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's personalize your health journey"
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/subTitle"
+        app:layout_constraintBottom_toTopOf="@id/nextBtn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="12dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nameInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Full Name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:startIconDrawable="@android:drawable/ic_menu_edit"
+                        app:startIconTint="@color/primary"
+                        app:errorEnabled="true">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nameInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/text_primary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Vibrant Gender Selection -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Gender"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/genderToggleGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginBottom="16dp"
+                        app:singleSelection="true"
+                        app:selectionRequired="true">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMale"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="MALE"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:textColor="@color/gender_text_selector"
+                            app:backgroundTint="@color/gender_background_selector"
+                            app:strokeColor="@color/gender_stroke_selector"
+                            app:rippleColor="@color/primary_light" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnFemale"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="FEMALE"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:textColor="@color/gender_text_selector"
+                            app:backgroundTint="@color/gender_background_selector"
+                            app:strokeColor="@color/gender_stroke_selector"
+                            app:rippleColor="@color/primary_light" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnOther"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="OTHER"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:textColor="@color/gender_text_selector"
+                            app:backgroundTint="@color/gender_background_selector"
+                            app:strokeColor="@color/gender_stroke_selector"
+                            app:rippleColor="@color/primary_light" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:layout_marginTop="8dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/ageInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Age"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxCornerRadiusTopStart="16dp"
+                            app:boxCornerRadiusTopEnd="16dp"
+                            app:boxCornerRadiusBottomStart="16dp"
+                            app:boxCornerRadiusBottomEnd="16dp"
+                            app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+                            app:startIconTint="@color/primary"
+                            app:errorEnabled="true">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ageInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textColor="@color/text_primary" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <View android:layout_width="16dp" android:layout_height="1dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/weightInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Weight (kg)"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxCornerRadiusTopStart="16dp"
+                            app:boxCornerRadiusTopEnd="16dp"
+                            app:boxCornerRadiusBottomStart="16dp"
+                            app:boxCornerRadiusBottomEnd="16dp"
+                            app:errorEnabled="true">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/weightInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:textColor="@color/text_primary" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/heightInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Height (cm)"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:errorEnabled="true">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/heightInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/text_primary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="CHECK HEALTH STATUS"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="40dp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="@color/primary"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

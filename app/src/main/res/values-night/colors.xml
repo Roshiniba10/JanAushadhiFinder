@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Refined Modern Dark Mode Palette -->
+    <color name="primary">#4DB6AC</color> <!-- Light Teal for visibility -->
+    <color name="primary_dark">#004D40</color>
+    <color name="primary_variant">#80CBC4</color>
+    <color name="primary_light">#263238</color>
+
+    <color name="secondary">#FFAB91</color> <!-- Soft Coral -->
+    <color name="secondary_dark">#BF360C</color>
+    <color name="secondary_light">#3E2723</color>
+
+    <color name="accent">#FFE082</color>
+
+    <!-- Deep Backgrounds & Surfaces -->
+    <color name="background">#121212</color>
+    <color name="background_soft">#1A1C1C</color>
+    <color name="surface">#1E1E1E</color>
+
+    <!-- High-Contrast Typography -->
+    <color name="text_primary">#E1F5FE</color>
+    <color name="text_secondary">#B0BEC5</color>
+    <color name="text_body">#CFD8DC</color>
+    <color name="text_title">#4DB6AC</color>
+
+    <!-- Theme-Aware Item Components -->
+    <color name="item_header_bg">#252B25</color>
+    <color name="store_header_bg">#222D2C</color>
+    <color name="card_border">#333838</color>
+
+    <!-- Indicators -->
+    <color name="savings_green">#81C784</color>
+    <color name="savings_bg">#1B5E20</color>
+    <color name="price_red">#EF9A9A</color>
+
+    <color name="white">#E0E0E0</color>
+    <color name="black">#000000</color>
+
+    <!-- Dynamic Gradient Colors -->
+    <color name="background_gradient_start">#121212</color>
+    <color name="background_gradient_end">#1E1E1E</color>
+</resources>
