@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "178839451333",
+    "project_id": "janaushadhifinder-7bee9",
+    "storage_bucket": "janaushadhifinder-7bee9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178839451333:android:7a28188f5532948f4962ac",
+        "android_client_info": {
+          "package_name": "com.example.janaushadhifinder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA47yZsYAc-bYPwBkIeIIT1Y7s65sBqiR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
